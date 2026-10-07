@@ -1,0 +1,100 @@
+@model Lazaro_Midterm_Store.Models.Order
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-7">
+
+            <h1 class="mb-4">Checkout</h1>
+
+            <div class="card shadow-sm">
+
+                <div class="card-body">
+
+                    <form method="post" action="/Cart/PlaceOrder">
+
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Full Name
+                            </label>
+
+                            <input type="text"
+                                   name="CustomerName"
+                                   class="form-control"
+                                   placeholder="Enter your full name"
+                                   required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Email
+                            </label>
+
+                            <input type="email"
+                                   name="Email"
+                                   class="form-control"
+                                   placeholder="Enter your email"
+                                   required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Address
+                            </label>
+
+                            <textarea name="Address"
+                                      class="form-control"
+                                      rows="3"
+                                      placeholder="Enter your delivery address"
+                                      required></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">
+                                Payment Method
+                            </label>
+
+                            <select name="PaymentMethod"
+                                    class="form-select"
+                                    required>
+
+                                <option value="">
+                                    Select payment method
+                                </option>
+
+                                <option value="Cash on Delivery">
+                                    Cash on Delivery
+                                </option>
+
+                                <option value="GCash">
+                                    GCash
+                                </option>
+
+                                <option value="Credit/Debit Card">
+                                    Credit/Debit Card
+                                </option>
+
+                            </select>
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-success w-100">
+                            Place Order
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

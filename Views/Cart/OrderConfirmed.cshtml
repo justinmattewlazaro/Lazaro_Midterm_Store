@@ -1,0 +1,61 @@
+@model Lazaro_Midterm_Store.Models.Order
+
+@{
+    ViewData["Title"] = "Order Confirmed";
+}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-7">
+
+            <div class="card shadow text-center">
+
+                <div class="card-body p-5">
+
+                    <h1 class="text-success mb-4">
+                        Order Confirmed!
+                    </h1>
+
+                    <p class="lead">
+                        Thank you for your order, @Model.CustomerName!
+                    </p>
+
+                    <hr />
+
+                    <h5>Order Information</h5>
+
+                    <p>
+                        <strong>Email:</strong>
+                        @Model.Email
+                    </p>
+
+                    <p>
+                        <strong>Delivery Address:</strong>
+                        @Model.Address
+                    </p>
+
+                    <p>
+                        <strong>Payment Method:</strong>
+                        @Model.PaymentMethod
+                    </p>
+
+                    <div class="alert alert-success mt-4">
+                        Your order has been successfully placed.
+                    </div>
+
+                    <a href="/Store"
+                       class="btn btn-primary mt-3">
+                        Continue Shopping
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
